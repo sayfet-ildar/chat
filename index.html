@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="window_chat">
+            <div class="content">
+                <div class="header">
+                    <a href="#popup_settings" id="btn_settings" class="btn_settings">Настройки</a>
+                    <div class="btn_exit">Выйти</div>
+                </div>
+                <div class="messages_block">
+                    <ul class="block_messages">
+                        <li class="sent_message" id="delivered_message">
+                            <output class="name">Я: </output>
+                            <span class="text">Добрый день!</span>
+                            <p class="time_message">18:45</p>
+                        </li>
+                        <li class="received_message">
+                            <output class="name">Собеседник: </output>
+                            <span class="text">Добрый день!</span>
+                            <p class="time_message">18:45</p>
+                        </li>
+                        <li class="received_message">
+                            <output class="name">Собеседник: </output>
+                            <span class="text">А это второе и, кажется, оно очень длинное, чтобы поместиться на
+                                одной строке</span>
+                            <p class="time_message">18:45</p>
+                        </li>
+                        <template id="message">
+                            <li class="sent_message" id="not_delivered_message">
+                                <output class="name">Я: </output>
+                                <span class="text">Добрый день!</span>
+                                <p class="time_message">18:45</p>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <form>
+                    <div class="block_input_message">
+                        <input type="text" class="input_message" placeholder="сообщение.." required>
+                        <button type="submit" class="enter_message">-></button>
+                    </div>
+                </form>
+                <div id="popup_settings" class="popup_settings">
+                    <a href="#btn_settings" class="popup_area"></a>
+                    <div class="popup_body">
+                        <div class="popup_content">
+                            <div class="header_popup">
+                                <div class="popup_title">Настройки</div>
+                                <a href="#btn_settings" class="popup_close">+</a>
+                            </div>
+                            <div class="main_popup">
+                                <div class="popup_title_setting">Имя в чате</div>
+                                <div class="popup_block_input">
+                                    <input type="text" class="input_name" placeholder="имя..">
+                                    <button type="button" class="btn_change_name">-></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
